@@ -1,0 +1,27 @@
+
+longlong FUN_1401098b4(int param_1)
+
+{
+  char cVar1;
+  uint7 extraout_var;
+  uint7 uVar2;
+  undefined7 extraout_var_00;
+  uint7 extraout_var_01;
+  
+  if (param_1 == 0) {
+    DAT_14012a9e0 = 1;
+  }
+  FUN_140109a74();
+  cVar1 = FUN_14010a198();
+  uVar2 = extraout_var;
+  if (cVar1 != '\0') {
+    cVar1 = FUN_14010a198();
+    if (cVar1 != '\0') {
+      return CONCAT71(extraout_var_00,1);
+    }
+    FUN_14010a198();
+    uVar2 = extraout_var_01;
+  }
+  return (ulonglong)uVar2 << 8;
+}
+

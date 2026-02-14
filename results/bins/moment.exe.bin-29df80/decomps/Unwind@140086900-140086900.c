@@ -1,0 +1,47 @@
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void Unwind_140086900(void)
+
+{
+  undefined8 *puVar1;
+  undefined8 *_Memory;
+  void *pvVar2;
+  void *_Memory_00;
+  
+  if (DAT_14012aae8 != (void *)0x0) {
+    pvVar2 = DAT_14012aae8;
+    if ((0xfff < (ulonglong)(DAT_14012aaf8 - (longlong)DAT_14012aae8)) &&
+       (pvVar2 = *(void **)((longlong)DAT_14012aae8 + -8),
+       0x1f < (ulonglong)((longlong)DAT_14012aae8 + (-8 - (longlong)pvVar2)))) {
+LAB_140086a03:
+                    /* WARNING: Subroutine does not return */
+      _invalid_parameter_noinfo_noreturn();
+    }
+    free(pvVar2);
+    _DAT_14012aae8 = (undefined1  [16])0x0;
+    DAT_14012aaf8 = 0;
+  }
+  puVar1 = DAT_14012aad8;
+  *(undefined8 *)DAT_14012aad8[1] = 0;
+  _Memory = (undefined8 *)*puVar1;
+  do {
+    if (_Memory == (undefined8 *)0x0) {
+      free(puVar1);
+      return;
+    }
+    puVar1 = (undefined8 *)*_Memory;
+    if (0xf < (ulonglong)_Memory[5]) {
+      pvVar2 = (void *)_Memory[2];
+      _Memory_00 = pvVar2;
+      if ((0xfff < _Memory[5] + 1) &&
+         (_Memory_00 = *(void **)((longlong)pvVar2 + -8),
+         0x1f < (ulonglong)((longlong)pvVar2 + (-8 - (longlong)_Memory_00)))) goto LAB_140086a03;
+      free(_Memory_00);
+    }
+    free(_Memory);
+    _Memory = puVar1;
+    puVar1 = DAT_14012aad8;
+  } while( true );
+}
+
